@@ -305,3 +305,120 @@ rules:
           dest: "/app/wav/"
           on_conflict: skip
  
+  - name: "Find gmap"
+    locations: /app
+    filters:
+      - extension: gmap
+    actions:
+      - move: 
+          dest: "/app/gmap/"
+          on_conflict: skip 
+ 
+  - name: "Find ods"
+    locations: /app
+    filters:
+      - extension: ods
+    actions:
+      - move: 
+          dest: "/app/ods/"
+          on_conflict: skip
+ 
+  - name: "Find xls"
+    locations: /app
+    filters:
+      - extension: xls
+    actions:
+      - move: 
+          dest: "/app/xls/"
+          on_conflict: skip
+ 
+  - name: "Find DNG"
+    locations: /app
+    filters:
+      - extension: DNG
+    actions:
+      - move: 
+          dest: "/app/DNG/"
+          on_conflict: skip
+ 
+  - name: "Find TIF"
+    locations: /app
+    filters:
+      - extension: TIF
+    actions:
+      - move: 
+          dest: "/app/TIF/"
+          on_conflict: skip
+ 
+  - name: "Find gslides"
+    locations: /app
+    filters:
+      - extension: gslides
+    actions:
+      - move: 
+          dest: "/app/gslides/"
+          on_conflict: skip
+ 
+  - name: "Find docx"
+    locations: /app
+    filters:
+      - extension: docx
+    actions:
+      - move: 
+          dest: "/app/docx/"
+          on_conflict: skip
+ 
+  - name: "Find gform"
+    locations: /app
+    filters:
+      - extension: gform
+    actions:
+      - move: 
+          dest: "/app/gform/"
+          on_conflict: skip
+ 
+  - name: "Find xlxt"
+    locations: /app
+    filters:
+      - extension: xlxt
+    actions:
+      - move: 
+          dest: "/app/xlxt/"
+          on_conflict: skip
+ 
+  - name: "Find sql"
+    locations: /app
+    filters:
+      - extension: sql
+    actions:
+      - move: 
+          dest: "/app/sql/"
+          on_conflict: skip
+ 
+  - name: "Find iso"
+    locations: /app
+    filters:
+      - extension: iso
+    actions:
+      - move: 
+          dest: "/app/iso/"
+          on_conflict: skip
+ 
+  - name: "Find py"
+    locations: /app
+    filters:
+      - extension: py
+    actions:
+      - move: 
+          dest: "/app/py/"
+          on_conflict: skip
+ 
+  - name: "Find kdenlive"
+    locations: /app
+    filters:
+      - extension: kdenlive
+    actions:
+      - move: 
+          dest: "/app/kdenlive/"
+          on_conflict: skip
+ 
