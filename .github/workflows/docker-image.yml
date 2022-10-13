@@ -23,4 +23,5 @@ jobs:
     - name: Build the Docker image
       run: | 
         docker build . --file Dockerfile --tag ohrafaelmartins/organize:latest
+        docker scan ohrafaelmartins/organize:latest
         docker push ohrafaelmartins/organize:latest
