@@ -502,8 +502,8 @@ rules:
       - move: 
           dest: "/app/LRV/"
           on_conflict: skip
-
-- name: "Find HEIC"
+  
+  - name: "Find HEIC"
     locations: /app
     filters:
       - extension: HEIC
@@ -511,8 +511,8 @@ rules:
       - move: 
           dest: "/app/HEIC/"
           on_conflict: skip
-
-- name: "Find MOV"
+  
+  - name: "Find MOV"
     locations: /app
     filters:
       - extension: MOV
@@ -520,11 +520,38 @@ rules:
       - move: 
           dest: "/app/MOV/"
           on_conflict: skip
-
-- name: "Find AAE"
+          
+  - name: "Find AAE"
     locations: /app
     filters:
       - extension: AAE
+    actions:
+      - move: 
+          dest: "/app/AAE/"
+          on_conflict: skip
+  
+  - name: "Find heic_"
+    locations: /app
+    filters:
+      - extension: heic
+    actions:
+      - move: 
+          dest: "/app/HEIC/"
+          on_conflict: skip
+  
+  - name: "Find mov_"
+    locations: /app
+    filters:
+      - extension: mov
+    actions:
+      - move: 
+          dest: "/app/MOV/"
+          on_conflict: skip
+          
+  - name: "Find aae_"
+    locations: /app
+    filters:
+      - extension: aae
     actions:
       - move: 
           dest: "/app/AAE/"
