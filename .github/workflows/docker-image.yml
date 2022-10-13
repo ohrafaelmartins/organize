@@ -23,7 +23,7 @@ jobs:
     - name: install tools
       run: |
         sudo apt update -y
-        sudo apt install -no-install-recommends docker-scan-plugin -y
+        sudo apt install --no-install-recommends docker-scan-plugin -y
 
     - name: docker build
       run: | 
