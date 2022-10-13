@@ -170,3 +170,21 @@ rules:
           dest: "/app/png/"
           on_conflict: skip
  
+  - name: "Find rar"
+    locations: /app
+    filters:
+      - extension: rar
+    actions:
+      - move: 
+          dest: "/app/rar/"
+          on_conflict: skip
+ 
+  - name: "Find log"
+    locations: /app
+    filters:
+      - extension: log
+    actions:
+      - move: 
+          dest: "/app/log/"
+          on_conflict: skip
+ 
