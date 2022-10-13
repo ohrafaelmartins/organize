@@ -422,3 +422,84 @@ rules:
           dest: "/app/kdenlive/"
           on_conflict: skip
  
+  - name: "Find PDF_"
+    locations: /app
+    filters:
+      - extension: PDF
+    actions:
+      - move: 
+          dest: "/app/PDF/"
+          on_conflict: skip
+ 
+  - name: "Find PNG_"
+    locations: /app
+    filters:
+      - extension: PNG
+    actions:
+      - move: 
+          dest: "/app/PNG/"
+          on_conflict: skip
+ 
+  - name: "Find xltx"
+    locations: /app
+    filters:
+      - extension: xltx
+    actions:
+      - move: 
+          dest: "/app/xltx/"
+          on_conflict: skip
+ 
+  - name: "Find url"
+    locations: /app
+    filters:
+      - extension: url
+    actions:
+      - move: 
+          dest: "/app/url/"
+          on_conflict: skip
+ 
+  - name: "Find pptx"
+    locations: /app
+    filters:
+      - extension: pptx
+    actions:
+      - move: 
+          dest: "/app/pptx/"
+          on_conflict: skip
+ 
+  - name: "Find ovpn"
+    locations: /app
+    filters:
+      - extension: ovpn
+    actions:
+      - move: 
+          dest: "/app/ovpn/"
+          on_conflict: skip
+ 
+  - name: "Find gscript"
+    locations: /app
+    filters:
+      - extension: gscript
+    actions:
+      - move: 
+          dest: "/app/gscript/"
+          on_conflict: skip
+ 
+  - name: "Find doc"
+    locations: /app
+    filters:
+      - extension: doc
+    actions:
+      - move: 
+          dest: "/app/doc/"
+          on_conflict: skip
+ 
+  - name: "Find LRV"
+    locations: /app
+    filters:
+      - extension: LRV
+    actions:
+      - move: 
+          dest: "/app/LRV/"
+          on_conflict: skip
+ 
