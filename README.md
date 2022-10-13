@@ -1,6 +1,7 @@
 # organize
 organize tool
-## Usage:
-``` docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest sim ```
-
-``` docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest run ```
+## Usage sim:
+    docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest sim
+    
+## Usage run:
+    docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest run  
