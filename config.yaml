@@ -188,3 +188,30 @@ rules:
           dest: "/app/log/"
           on_conflict: skip
  
+  - name: "Find gdoc"
+    locations: /app
+    filters:
+      - extension: gdoc
+    actions:
+      - move: 
+          dest: "/app/gdoc/"
+          on_conflict: skip
+ 
+  - name: "Find m4a"
+    locations: /app
+    filters:
+      - extension: m4a
+    actions:
+      - move: 
+          dest: "/app/m4a/"
+          on_conflict: skip
+ 
+  - name: "Find json"
+    locations: /app
+    filters:
+      - extension: json
+    actions:
+      - move: 
+          dest: "/app/json/"
+          on_conflict: skip
+ 
