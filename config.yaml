@@ -269,3 +269,39 @@ rules:
           dest: "/app/zz/"
           on_conflict: skip
  
+  - name: "Find mp3"
+    locations: /app
+    filters:
+      - extension: mp3
+    actions:
+      - move: 
+          dest: "/app/mp3/"
+          on_conflict: skip
+  
+  - name: "Find mkv"
+    locations: /app
+    filters:
+      - extension: mkv
+    actions:
+      - move: 
+          dest: "/app/mkv/"
+          on_conflict: skip
+ 
+  - name: "Find MTS"
+    locations: /app
+    filters:
+      - extension: MTS
+    actions:
+      - move: 
+          dest: "/app/MTS/"
+          on_conflict: skip
+ 
+  - name: "Find wav"
+    locations: /app
+    filters:
+      - extension: wav
+    actions:
+      - move: 
+          dest: "/app/wav/"
+          on_conflict: skip
+ 
