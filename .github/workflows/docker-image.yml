@@ -20,11 +20,6 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASS }}
         
     - uses: actions/checkout@v3
-    - name: install tools
-      run: |
-        sudo apt update -y
-        sudo apt install --no-install-recommends docker-scan-plugin -y
-
     - name: docker build
       run: | 
         docker build . --file Dockerfile --tag ohrafaelmartins/organize:latest
