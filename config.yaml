@@ -502,4 +502,30 @@ rules:
       - move: 
           dest: "/app/LRV/"
           on_conflict: skip
- 
+
+- name: "Find HEIC"
+    locations: /app
+    filters:
+      - extension: HEIC
+    actions:
+      - move: 
+          dest: "/app/HEIC/"
+          on_conflict: skip
+
+- name: "Find MOV"
+    locations: /app
+    filters:
+      - extension: MOV
+    actions:
+      - move: 
+          dest: "/app/MOV/"
+          on_conflict: skip
+
+- name: "Find AAE"
+    locations: /app
+    filters:
+      - extension: AAE
+    actions:
+      - move: 
+          dest: "/app/AAE/"
+          on_conflict: skip
