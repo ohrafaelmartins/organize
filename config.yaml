@@ -8,15 +8,6 @@ rules:
           dest: "/app/pdf/"
           on_conflict: skip
 
-  - name: "Find PDF2"
-    locations: /app
-    filters:
-      - extension: PDF
-    actions:
-      - move: 
-          dest: "/app/PDF/"
-          on_conflict: skip
-
   - name: "Find txt"
     locations: /app
     filters:
@@ -161,13 +152,13 @@ rules:
           dest: "/app/dec/"
           on_conflict: skip
  
-  - name: "Find xltx"
+  - name: "Find xlsx"
     locations: /app
     filters:
-      - extension: xltx
+      - extension: xlsx
     actions:
       - move: 
-          dest: "/app/xltx/"
+          dest: "/app/xlsx/"
           on_conflict: skip
  
   - name: "Find png"
@@ -177,15 +168,6 @@ rules:
     actions:
       - move: 
           dest: "/app/png/"
-          on_conflict: skip
- 
-  - name: "Find png2"
-    locations: /app
-    filters:
-      - extension: PNG
-    actions:
-      - move: 
-          dest: "/app/PNG/"
           on_conflict: skip
  
   - name: "Find rar"
@@ -438,77 +420,5 @@ rules:
     actions:
       - move: 
           dest: "/app/kdenlive/"
-          on_conflict: skip
- 
-  - name: "Find url"
-    locations: /app
-    filters:
-      - extension: url
-    actions:
-      - move: 
-          dest: "/app/url/"
-          on_conflict: skip
- 
-  - name: "Find pptx"
-    locations: /app
-    filters:
-      - extension: pptx
-    actions:
-      - move: 
-          dest: "/app/pptx/"
-          on_conflict: skip
- 
-  - name: "Find ovpn"
-    locations: /app
-    filters:
-      - extension: ovpn
-    actions:
-      - move: 
-          dest: "/app/ovpn/"
-          on_conflict: skip
- 
-  - name: "Find gscript"
-    locations: /app
-    filters:
-      - extension: gscript
-    actions:
-      - move: 
-          dest: "/app/gscript/"
-          on_conflict: skip
- 
-  - name: "Find doc"
-    locations: /app
-    filters:
-      - extension: doc
-    actions:
-      - move: 
-          dest: "/app/doc/"
-          on_conflict: skip
- 
-  - name: "Find JPG"
-    locations: /app
-    filters:
-      - extension: JPG
-    actions:
-      - move: 
-          dest: "/app/JPG/"
-          on_conflict: skip
- 
-  - name: "Find 360"
-    locations: /app
-    filters:
-      - extension: 360
-    actions:
-      - move: 
-          dest: "/app/360/"
-          on_conflict: skip
- 
-  - name: "Find LRV"
-    locations: /app
-    filters:
-      - extension: LRV
-    actions:
-      - move: 
-          dest: "/app/LRV/"
           on_conflict: skip
  
