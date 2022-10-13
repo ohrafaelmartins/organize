@@ -215,3 +215,57 @@ rules:
           dest: "/app/json/"
           on_conflict: skip
  
+  - name: "Find xml"
+    locations: /app
+    filters:
+      - extension: xml
+    actions:
+      - move: 
+          dest: "/app/xml/"
+          on_conflict: skip
+ 
+  - name: "Find odt"
+    locations: /app
+    filters:
+      - extension: odt
+    actions:
+      - move: 
+          dest: "/app/odt/"
+          on_conflict: skip
+ 
+  - name: "Find gz"
+    locations: /app
+    filters:
+      - extension: gz
+    actions:
+      - move: 
+          dest: "/app/gz/"
+          on_conflict: skip
+ 
+  - name: "Find jpg"
+    locations: /app
+    filters:
+      - extension: jpg
+    actions:
+      - move: 
+          dest: "/app/jpg/"
+          on_conflict: skip
+  
+  - name: "Find jpeg"
+    locations: /app
+    filters:
+      - extension: jpeg
+    actions:
+      - move: 
+          dest: "/app/jpeg/"
+          on_conflict: skip
+ 
+  - name: "Find zz"
+    locations: /app
+    filters:
+      - extension: zz
+    actions:
+      - move: 
+          dest: "/app/zz/"
+          on_conflict: skip
+ 
