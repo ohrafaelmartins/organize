@@ -12,7 +12,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
+    steps:      
+    
+    - uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USER }}
+        password: ${{ secrets.DOCKERHUB_PASS }}
+        
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ohrafaelmartins/organize:$(date +%s)
+      run: | 
+        docker build . --file Dockerfile --tag ohrafaelmartins/organize:latest
+        docker push ohrafaelmartins/organize:latest
