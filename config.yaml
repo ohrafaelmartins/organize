@@ -1,0 +1,172 @@
+rules:
+  - name: "Find PDF"
+    locations: /app
+    filters:
+      - extension: pdf
+    actions:
+      - move: 
+          dest: "/app/pdf/"
+          on_conflict: skip
+
+  - name: "Find txt"
+    locations: /app
+    filters:
+      - extension: txt
+    actions:
+      - move: 
+          dest: "/app/txt/"
+          on_conflict: skip
+
+  - name: "Find csv"
+    locations: /app
+    filters:
+      - extension: csv
+    actions:
+      - move: 
+          dest: "/app/csv/"
+          on_conflict: skip
+  
+  - name: "Find gsheet"
+    locations: /app
+    filters:
+      - extension: gsheet
+    actions:
+      - move: 
+          dest: "/app/gsheet/"
+          on_conflict: skip
+  
+  - name: "Find sh"
+    locations: /app
+    filters:
+      - extension: sh
+    actions:
+      - move: 
+          dest: "/app/sh/"
+          on_conflict: skip
+  
+  - name: "Find zip"
+    locations: /app
+    filters:
+      - extension: zip
+    actions:
+      - move: 
+          dest: "/app/zip/"
+          on_conflict: skip
+  
+  - name: "Find mp4"
+    locations: /app
+    filters:
+      - extension: mp4
+    actions:
+      - move: 
+          dest: "/app/mp4/"
+          on_conflict: skip
+  
+  - name: "Find ics"
+    locations: /app
+    filters:
+      - extension: ics
+    actions:
+      - move: 
+          dest: "/app/ics/"
+          on_conflict: skip
+  
+  - name: "Find dmg"
+    locations: /app
+    filters:
+      - extension: dmg
+    actions:
+      - move: 
+          dest: "/app/dmg/"
+          on_conflict: skip
+  
+  - name: "Find rdp"
+    locations: /app
+    filters:
+      - extension: rdp
+    actions:
+      - move: 
+          dest: "/app/rdp/"
+          on_conflict: skip
+  
+  - name: "Find yaml"
+    locations: /app
+    filters:
+      - extension: yaml
+    actions:
+      - move: 
+          dest: "/app/yaml/"
+          on_conflict: skip
+  
+  - name: "Find yml"
+    locations: /app
+    filters:
+      - extension: yml
+    actions:
+      - move: 
+          dest: "/app/yaml/"
+          on_conflict: skip
+  
+  - name: "Find md"
+    locations: /app
+    filters:
+      - extension: md
+    actions:
+      - move: 
+          dest: "/app/md/"
+          on_conflict: skip  
+
+  - name: "Find pem"
+    locations: /app
+    filters:
+      - extension: pem
+    actions:
+      - move: 
+          dest: "/app/pem/"
+          on_conflict: skip
+ 
+  - name: "Find html"
+    locations: /app
+    filters:
+      - extension: html
+    actions:
+      - move: 
+          dest: "/app/html/"
+          on_conflict: skip
+ 
+  - name: "Find ogg"
+    locations: /app
+    filters:
+      - extension: ogg
+    actions:
+      - move: 
+          dest: "/app/ogg/"
+          on_conflict: skip
+ 
+  - name: "Find dec"
+    locations: /app
+    filters:
+      - extension: dec
+    actions:
+      - move: 
+          dest: "/app/dec/"
+          on_conflict: skip
+ 
+  - name: "Find xlsx"
+    locations: /app
+    filters:
+      - extension: xlsx
+    actions:
+      - move: 
+          dest: "/app/xlsx/"
+          on_conflict: skip
+ 
+  - name: "Find png"
+    locations: /app
+    filters:
+      - extension: png
+    actions:
+      - move: 
+          dest: "/app/png/"
+          on_conflict: skip
+ 
