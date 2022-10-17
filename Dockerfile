@@ -4,6 +4,6 @@ RUN apk upgrade --available && sync && apk add py3-pip && pip3 install -U organi
 
 WORKDIR /app
 
-COPY config.yaml /root/.config/organize/config.yaml
+COPY rules.yaml /root/.config/organize/config.yaml
 
 ENTRYPOINT [ "organize" ]

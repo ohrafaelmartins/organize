@@ -1,0 +1,151 @@
+compress_ext: &compress
+  - gz
+  - rar
+  - zip
+
+others_ext: &others
+  - aae
+  - AAE
+  - gscript
+  - ovpn
+  - url
+  - iso
+  - dmg
+  - ics
+  - rdp
+  - log
+  - MTS
+  - gmap
+videos_ext: &videos
+  - mov
+  - MOV
+  - LRV
+  - kdenlive
+  - mp4
+  - zz
+  - mkv
+  - m4a
+
+scripts_ext: &scripts
+  - pub
+  - pem
+  - json
+  - html
+  - py
+  - sql
+  - sh
+  - yaml
+  - yml
+
+docs_ext: &docs
+  - gdoc
+  - xlsx
+  - dec
+  - md
+  - xml
+  - odt
+  - pdf
+  - txt
+  - csv
+  - gsheet
+  - doc
+  - pptx
+  - xltx
+  - PDF
+  - xlxt
+  - gslides
+  - docx
+  - gform
+  - ods
+  - xls
+images_ext: &images
+  - png
+  - jpg
+  - heic
+  - HEIC
+  - PNG
+  - DNG
+  - TIF
+
+audios_ext: &audios
+  - wav
+  - mp3
+  - ogg
+
+rules:
+  - name: "find images"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *images
+    actions:
+      - move: 
+          dest: "/app/_IMAGES/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find audios"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *audios
+    actions:
+      - move: 
+          dest: "/app/_AUDIOS/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find docs"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *docs
+    actions:
+      - move: 
+          dest: "/app/_DOCS/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find scripts"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *scripts
+    actions:
+      - move: 
+          dest: "/app/_SCRIPTS/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find OTHERS"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *others
+    actions:
+      - move: 
+          dest: "/app/_OTHERS/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find VIDEOS"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *videos
+    actions:
+      - move: 
+          dest: "/app/_VIDEOS/{extension.lower()}/"
+          on_conflict: skip
+
+  - name: "find compress"
+    locations: "/app"
+    subfolders: true
+    filters:
+      - extension:
+          - *compress
+    actions:
+      - move: 
+          dest: "/app/_COMPRESS/{extension.lower()}/"
+          on_conflict: skip
