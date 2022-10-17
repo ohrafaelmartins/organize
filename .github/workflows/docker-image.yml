@@ -15,13 +15,7 @@ jobs:
       run:
         shell: bash
 
-    steps:      
-    
-    - uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKERHUB_USER }}
-        password: ${{ secrets.DOCKERHUB_PASS }}
-        
+    steps:          
     - uses: actions/checkout@v3
     - name: docker build
       run: | 
@@ -35,6 +29,11 @@ jobs:
         shell: bash
 
     steps:      
+
+    - uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USER }}
+        password: ${{ secrets.DOCKERHUB_PASS }}
     
     - name: docker push
       run: | 
