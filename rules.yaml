@@ -2,7 +2,6 @@ compress_ext: &compress
   - gz
   - rar
   - zip
-
 others_ext: &others
   - aae
   - AAE
@@ -10,6 +9,7 @@ others_ext: &others
   - ovpn
   - url
   - iso
+  - ISO
   - dmg
   - ics
   - rdp
@@ -25,7 +25,6 @@ videos_ext: &videos
   - zz
   - mkv
   - m4a
-
 scripts_ext: &scripts
   - pub
   - pem
@@ -36,7 +35,6 @@ scripts_ext: &scripts
   - sh
   - yaml
   - yml
-
 docs_ext: &docs
   - gdoc
   - xlsx
@@ -66,12 +64,14 @@ images_ext: &images
   - PNG
   - DNG
   - TIF
-
+  - GPR
+  - gpr
+  - THM
+  - thm
 audios_ext: &audios
   - wav
   - mp3
   - ogg
-
 rules:
   - name: "find images"
     locations: "/app"
@@ -82,7 +82,6 @@ rules:
       - move:
           dest: "/app/_IMAGES/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find audios"
     locations: "/app"
     filters:
@@ -92,7 +91,6 @@ rules:
       - move:
           dest: "/app/_AUDIOS/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find docs"
     locations: "/app"
     filters:
@@ -102,7 +100,6 @@ rules:
       - move:
           dest: "/app/_DOCS/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find scripts"
     locations: "/app"
     filters:
@@ -112,7 +109,6 @@ rules:
       - move:
           dest: "/app/_SCRIPTS/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find OTHERS"
     locations: "/app"
     filters:
@@ -122,7 +118,6 @@ rules:
       - move:
           dest: "/app/_OTHERS/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find VIDEOS"
     locations: "/app"
     filters:
@@ -132,7 +127,6 @@ rules:
       - move:
           dest: "/app/_VIDEOS/{extension.lower()}/"
           on_conflict: skip
-
   - name: "find compress"
     locations: "/app"
     filters:
