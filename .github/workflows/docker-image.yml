@@ -25,7 +25,7 @@ jobs:
         docker build . --file Dockerfile --tag ohrafaelmartins/organize:latest
     
     - name: Scan Docker image for vulnerabilities with Trivy
-      uses: aquasecurity/trivy-action@v0.6.0
+      uses: aquasecurity/trivy-action@master
       with:
         image-ref: ohrafaelmartins/organize:latest
         ignore-unfixed: true
