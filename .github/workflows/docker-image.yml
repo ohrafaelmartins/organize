@@ -12,7 +12,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:      
+    steps:
     
     - uses: docker/login-action@v2
       with:
@@ -23,6 +23,12 @@ jobs:
     - name: docker build
       run: | 
         docker build . --file Dockerfile --tag ohrafaelmartins/organize:latest
+    
+    - name: Scan Docker image for vulnerabilities with Trivy
+      uses: aquasecurity/trivy-action@v0.6.0
+      with:
+        image-ref: ohrafaelmartins/organize:latest
+        ignore-unfixed: true
     
     - name: docker push
       run: | 
