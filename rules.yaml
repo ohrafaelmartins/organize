@@ -158,3 +158,24 @@ rules:
       - move:
           dest: "/app/rmdigital/_DOCS/{extension.lower()}/"
           on_conflict: skip
+  #
+  - name: "find by reels files"
+    locations:
+      - path: "/app"
+        max_depth: null
+    filters:
+      - extension:
+          - *images
+          - *audios
+          - *docs
+          - *scripts
+          - *others
+          - *videos
+          - *compress
+      - name:
+          contains: reels
+          case_sensitive: false
+    actions:
+      - move:
+          dest: "/app/reels/{extension.lower()}/"
+          on_conflict: skip
