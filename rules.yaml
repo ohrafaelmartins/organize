@@ -141,7 +141,6 @@ rules:
   - name: "find by rmdigital files"
     locations:
       - path: "/app"
-        max_depth: null
     filters:
       - extension:
           - *images
@@ -162,7 +161,6 @@ rules:
   - name: "find by reels files"
     locations:
       - path: "/app"
-        max_depth: null
     filters:
       - extension:
           - *images
