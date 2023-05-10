@@ -2,6 +2,7 @@ compress_ext: &compress
   - gz
   - rar
   - zip
+  - kdbx
 others_ext: &others
   - aae
   - AAE
