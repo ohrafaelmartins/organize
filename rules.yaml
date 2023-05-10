@@ -178,3 +178,23 @@ rules:
       - move:
           dest: "/app/reels/{extension.lower()}/"
           on_conflict: skip
+  #
+  - name: "find by nissan files"
+    locations:
+      - path: "/app"
+    filters:
+      - extension:
+          - *images
+          - *audios
+          - *docs
+          - *scripts
+          - *others
+          - *videos
+          - *compress
+      - name:
+          contains: nissan
+          case_sensitive: false
+    actions:
+      - move:
+          dest: "/app/nissan/{extension.lower()}/"
+          on_conflict: skip
