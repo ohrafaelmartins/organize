@@ -61,6 +61,7 @@ docs_ext: &docs
 images_ext: &images
   - png
   - jpg
+  - jpeg
   - heic
   - HEIC
   - PNG
