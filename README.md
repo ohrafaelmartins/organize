@@ -1,5 +1,12 @@
+# Description
+
 Organize Your Files with tfeldmann/organize
 This project helps you organize your computer files by moving them to specific directories based on their file extensions. The rules are defined in the organize.yaml file.
+
+
+# Descrição
+Este projeto ajuda você a organizar seus arquivos de computador movendo-os para diretórios específicos com base em suas extensões de arquivo. As regras são definidas no arquivo organize.yaml.
+
 
 ## Rules
 The following rules have been defined to organize files in the /app directory:
