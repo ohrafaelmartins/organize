@@ -63,14 +63,26 @@ images_ext: &images
   - jpg
   - jpeg
   - heic
+  - heic
+  - png
+  - dng
+  - tif
+  - gpr
+  - gpr
+  - thm
+  - thm
+  - PNG
+  - JPG
+  - JPEG
+  - HEIC
   - HEIC
   - PNG
   - DNG
   - TIF
   - GPR
-  - gpr
+  - GPR
   - THM
-  - thm
+  - THM
 audios_ext: &audios
   - wav
   - mp3
