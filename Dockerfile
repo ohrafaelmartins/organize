@@ -1,6 +1,6 @@
 FROM python:alpine
 
-RUN apk upgrade --available && sync && apk add py3-pip && pip3 install -U organize-tool
+RUN apk upgrade --available && sync && apk add py3-pip && pip3 install -U organize-tool==2.4
 
 WORKDIR /app
 
