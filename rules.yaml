@@ -83,6 +83,8 @@ images_ext: &images
   - GPR
   - THM
   - THM
+  - webp
+  - WEBP
 audios_ext: &audios
   - wav
   - mp3
