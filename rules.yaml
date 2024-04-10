@@ -1,94 +1,140 @@
 compress_ext: &compress
   - gz
-  - rar
-  - zip
+  - GZ
   - kdbx
+  - KDBX
+  - rar
+  - RAR
+  - zip
+  - ZIP
 others_ext: &others
   - aae
   - AAE
-  - gscript
-  - ovpn
-  - url
-  - iso
-  - ISO
   - dmg
-  - ics
-  - rdp
-  - log
-  - MTS
+  - DMG
   - gmap
+  - GMAP
+  - GSCRIPT
+  - gscript
+  - ics
+  - ICS
+  - ISO
+  - iso
+  - log
+  - LOG
+  - MTS
+  - ovpn
+  - OVPN
+  - RDP
+  - rdp
+  - URL
+  - url
 videos_ext: &videos
+  - kdenlive
+  - KDENLIVE
+  - LRV
+  - m4a
+  - M4A
+  - mkv
+  - MKV
   - mov
   - MOV
-  - LRV
-  - kdenlive
   - mp4
+  - MP4
   - zz
-  - mkv
-  - m4a
+  - ZZ
 scripts_ext: &scripts
-  - pub
-  - pem
-  - json
   - html
+  - HTML
+  - json
+  - JSON
+  - pem
+  - PEM
+  - pub
+  - PUB
   - py
-  - sql
+  - PY
   - sh
+  - SH
+  - sql
+  - SQL
   - yaml
+  - YAML
   - yml
+  - YML
 docs_ext: &docs
-  - gdoc
-  - xlsx
-  - dec
-  - md
-  - xml
-  - odt
-  - pdf
-  - txt
+  - CSV
   - csv
-  - gsheet
+  - DEC
+  - dec
   - doc
-  - pptx
-  - xltx
-  - PDF
-  - xlxt
-  - gslides
+  - DOC
   - docx
+  - DOCX
+  - GDOC
+  - gdoc
+  - GFORM
   - gform
+  - GSHEET
+  - gsheet
+  - gslides
+  - GSLIDES
+  - md
+  - MD
+  - ODS
   - ods
-  - xls
+  - ODT
+  - odt
+  - OFX
   - ofx
+  - PDF
+  - pdf
+  - php
+  - PHP
+  - pptx
+  - PPTX
+  - txt
+  - TXT
+  - XLS
+  - xls
+  - XLSX
+  - xlsx
+  - xltx
+  - XLTX
+  - xlxt
+  - XLXT
+  - xml
+  - XML
 images_ext: &images
-  - png
-  - jpg
-  - jpeg
-  - heic
-  - heic
-  - png
+  - ai
+  - AI
   - dng
-  - tif
-  - gpr
-  - gpr
-  - thm
-  - thm
-  - PNG
-  - JPG
-  - JPEG
-  - HEIC
-  - HEIC
-  - PNG
   - DNG
+  - gpr
+  - GPR
+  - heic
+  - HEIC
+  - jpeg
+  - JPEG
+  - jpg
+  - JPG
+  - png
+  - PNG
+  - svg
+  - SVG
+  - thm
+  - THM
+  - tif
   - TIF
-  - GPR
-  - GPR
-  - THM
-  - THM
   - webp
   - WEBP
 audios_ext: &audios
-  - wav
   - mp3
+  - MP3
   - ogg
+  - OGG
+  - wav
+  - WAV
 rules:
   - name: "find images"
     locations: "/app"
