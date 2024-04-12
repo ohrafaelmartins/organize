@@ -71,6 +71,8 @@ docs_ext: &docs
   - DOC
   - docx
   - DOCX
+  - eps
+  - EPS
   - GDOC
   - gdoc
   - GFORM
@@ -93,6 +95,8 @@ docs_ext: &docs
   - PHP
   - pptx
   - PPTX
+  - psd
+  - PSD
   - txt
   - TXT
   - XLS
