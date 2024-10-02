@@ -109,6 +109,8 @@ docs_ext: &docs
   - XLXT
   - xml
   - XML
+  - pfx
+  - PFX
 images_ext: &images
   - ai
   - AI
