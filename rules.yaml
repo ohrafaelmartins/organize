@@ -1,87 +1,144 @@
-# Regras de organização de arquivos
 compress_ext: &compress
   - gz
+  - GZ
   - kdbx
+  - KDBX
   - rar
+  - RAR
   - zip
-
+  - ZIP
 others_ext: &others
   - aae
+  - AAE
   - dmg
+  - DMG
   - gmap
+  - GMAP
+  - GSCRIPT
   - gscript
   - ics
+  - ICS
+  - ISO
   - iso
   - log
-  - mts
+  - LOG
+  - MTS
   - ovpn
+  - OVPN
+  - RDP
   - rdp
+  - URL
   - url
-
 videos_ext: &videos
   - kdenlive
-  - lrv
+  - KDENLIVE
+  - LRV
   - m4a
+  - M4A
   - mkv
+  - MKV
   - mov
+  - MOV
   - mp4
-
+  - MP4
+  - zz
+  - ZZ
 scripts_ext: &scripts
   - html
+  - HTML
   - json
+  - JSON
   - pem
+  - PEM
   - pub
+  - PUB
   - py
+  - PY
   - sh
+  - SH
   - sql
+  - SQL
   - yaml
+  - YAML
   - yml
-
+  - YML
 docs_ext: &docs
+  - CSV
   - csv
+  - DEC
   - dec
   - doc
+  - DOC
   - docx
+  - DOCX
   - eps
+  - EPS
+  - GDOC
   - gdoc
+  - GFORM
+  - gform
+  - GSHEET
   - gsheet
   - gslides
+  - GSLIDES
   - md
+  - MD
+  - ODS
   - ods
+  - ODT
   - odt
+  - OFX
   - ofx
+  - PDF
   - pdf
   - php
+  - PHP
   - pptx
+  - PPTX
   - psd
+  - PSD
   - txt
+  - TXT
+  - XLS
   - xls
+  - XLSX
   - xlsx
   - xltx
+  - XLTX
+  - xlxt
+  - XLXT
   - xml
-
+  - XML
 images_ext: &images
   - ai
+  - AI
   - dng
+  - DNG
   - gpr
+  - GPR
   - heic
+  - HEIC
   - jpeg
+  - JPEG
   - jpg
+  - JPG
   - png
+  - PNG
   - svg
+  - SVG
   - thm
+  - THM
   - tif
+  - TIF
   - webp
-
+  - WEBP
 audios_ext: &audios
   - mp3
+  - MP3
   - ogg
+  - OGG
   - wav
-
-# Adicionando a extensão pfx
-pfx_ext:
-  - pfx
-
+  - WAV
 rules:
   - name: "find images"
     locations: "/app"
@@ -119,7 +176,7 @@ rules:
       - move:
           dest: "/app/_SCRIPTS/{extension.lower()}/"
           on_conflict: skip
-  - name: "find others"
+  - name: "find OTHERS"
     locations: "/app"
     filters:
       - extension:
@@ -128,7 +185,7 @@ rules:
       - move:
           dest: "/app/_OTHERS/{extension.lower()}/"
           on_conflict: skip
-  - name: "find videos"
+  - name: "find VIDEOS"
     locations: "/app"
     filters:
       - extension:
@@ -146,15 +203,6 @@ rules:
       - move:
           dest: "/app/_COMPRESS/{extension.lower()}/"
           on_conflict: skip
-  - name: "find pfx files"
-    locations: "/app"
-    filters:
-      - extension:
-          - *pfx_ext
-    actions:
-      - move:
-          dest: "/app/_PFX/{extension.lower()}/"
-          on_conflict: skip
   #
   - name: "find by rmdigital files"
     locations:
@@ -168,7 +216,6 @@ rules:
           - *others
           - *videos
           - *compress
-          - *pfx_ext
       - name:
           startswith: rmdigital
           case_sensitive: false
@@ -189,7 +236,6 @@ rules:
           - *others
           - *videos
           - *compress
-          - *pfx_ext
       - name:
           contains: reels
           case_sensitive: false
@@ -210,7 +256,6 @@ rules:
           - *others
           - *videos
           - *compress
-          - *pfx_ext
       - name:
           contains: nissan
           case_sensitive: false
