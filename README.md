@@ -54,5 +54,5 @@ docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest sim
 ```
 #### apply command
 ```
-docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest sim 
+docker run --rm -v ${PWD}:/app ohrafaelmartins/organize:latest run 
 ```
