@@ -1,3 +1,7 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/ohrafaelmartins/organize)
+
+-- 
+
 # Description
 
 Organize Your Files with tfeldmann/organize
